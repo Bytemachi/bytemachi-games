@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ByteMachi Games | Brian Lara 2007</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+    body { background: #0d0e12; color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 20px; }
+    .brand { color: #22c55e; font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    h1 { font-size: 26px; font-weight: 800; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .sub { color: #9ea3b0; font-size: 13px; margin-bottom: 24px; }
+    .progress-box { width: 100%; max-width: 360px; background: #1a1d26; height: 6px; border-radius: 10px; overflow: hidden; margin-bottom: 24px; }
+    .progress-bar { width: 35%; height: 100%; background: #22c55e; border-radius: 10px; animation: load 2.5s ease-in-out forwards; }
+    @keyframes load { 0% { width: 10%; } 100% { width: 100%; } }
+    .insta-btn { display: inline-flex; align-items: center; gap: 8px; background: #181a20; border: 1px solid #2a2d3a; color: #e2e8f0; padding: 10px 16px; border-radius: 12px; text-decoration: none; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+    .play-btn { background: #22c55e; color: #000; font-weight: 800; border: none; padding: 14px 28px; border-radius: 12px; font-size: 15px; cursor: pointer; display: none; box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4); }
+  </style>
+</head>
+<body>
+
+  <div class="brand">BYTEMACHI GAMES</div>
+  <h1>BRIAN LARA 2007</h1>
+  <p class="sub" id="status">Initializing game engine (4034 MB)...</p>
+
+  <div class="progress-box">
+    <div class="progress-bar"></div>
+  </div>
+
+  <button class="play-btn" id="playBtn" onclick="launchGame()">▶ START GAME NOW</button>
+
+  <br>
+  <a href="https://instagram.com/bytemachi" target="_blank" class="insta-btn">
+    📸 Follow <b>@bytemachi</b> on Instagram for updates ↗
+  </a>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('status').innerText = "Game Engine Ready!";
+      document.getElementById('playBtn').style.display = "inline-block";
+    }, 2500);
+
+    function launchGame() {
+      window.location.href = "https://games.mickykharbanda.com/brian-lara/play/";
+    }
+  </script>
+
+</body>
+</html>
