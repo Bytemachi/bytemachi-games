@@ -41,10 +41,18 @@
     }, 2000);
 
     function launchGame() {
+      // Unlock Audio Context for Mobile WebViews
+      try {
+        let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+      } catch(e) {}
+
+      // Redirect to Game URL
       window.location.href = "https://games.mickykharbanda.com/brian-lara/play/";
     }
   </script>
 
 </body>
 </html>
-
